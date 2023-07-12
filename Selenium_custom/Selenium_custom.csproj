@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{34E02F8F-A6CD-4C0D-8211-701144324CE2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Selenium_custom</RootNamespace>
+    <AssemblyName>Selenium_custom</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ChilkatDotNet45">
+      <HintPath>D:\new\thu vien\ChilkatDotNet45.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.WebUtilities, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.WebUtilities.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.WebUtilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.2.0.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=2.0.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.2.0.2\lib\netstandard2.0\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=2.0.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.2.0.2\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=2.0.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Options.2.0.2\lib\netstandard2.0\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Net.Http.Headers, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.Headers.2.2.0\lib\netstandard2.0\Microsoft.Net.Http.Headers.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PuppeteerSharp, Version=10.0.0.0, Culture=neutral, PublicKeyToken=db12f80f85d8ba23, processorArchitecture=MSIL">
+      <HintPath>..\packages\PuppeteerSharp.10.0.0\lib\netstandard2.0\PuppeteerSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.6.0.0\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebDriver, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.4.9.1\lib\net47\WebDriver.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="action\ChangeStatus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="action\ChangeStatus.Designer.cs">
+      <DependentUpon>ChangeStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="action\CheckingProfile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="action\CheckingProfile.Designer.cs">
+      <DependentUpon>CheckingProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="action\CloseProfile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="action\CloseProfile.Designer.cs">
+      <DependentUpon>CloseProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="action\CreateProfileByDefault.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="action\CreateProfileByDefault.Designer.cs">
+      <DependentUpon>CreateProfileByDefault.cs</DependentUpon>
+    </Compile>
+    <Compile Include="action\CreateProfileCustomize.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="action\CreateProfileCustomize.Designer.cs">
+      <DependentUpon>CreateProfileCustomize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="action\DeleteProfile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="action\DeleteProfile.Designer.cs">
+      <DependentUpon>DeleteProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="action\GetProfileByUid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="action\GetProfileByUid.Designer.cs">
+      <DependentUpon>GetProfileByUid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="action\ListConfig.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="action\ListConfig.Designer.cs">
+      <DependentUpon>ListConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="action\ListProfile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="action\ListProfile.Designer.cs">
+      <DependentUpon>ListProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="action\ListStatus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="action\ListStatus.Designer.cs">
+      <DependentUpon>ListStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="action\ListTag.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="action\ListTag.Designer.cs">
+      <DependentUpon>ListTag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="action\OpenProfile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="action\OpenProfile.Designer.cs">
+      <DependentUpon>OpenProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="action\SyncTag.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="action\SyncTag.Designer.cs">
+      <DependentUpon>SyncTag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="action\Test_script.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="action\Test_script.Designer.cs">
+      <DependentUpon>Test_script.cs</DependentUpon>
+    </Compile>
+    <Compile Include="action\UpdateName.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="action\UpdateName.Designer.cs">
+      <DependentUpon>UpdateName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="action\UpdateNote.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="action\UpdateNote.Designer.cs">
+      <DependentUpon>UpdateNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="action\Update_Proxy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="action\Update_Proxy.Designer.cs">
+      <DependentUpon>Update_Proxy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controller\Api.cs" />
+    <Compile Include="controller\Puppeteer_Csharp.cs" />
+    <Compile Include="controller\Selenium_connect_port.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="model\Body_Customize.cs" />
+    <Compile Include="model\Change_status.cs" />
+    <Compile Include="model\CloseProfile.cs" />
+    <Compile Include="model\Create_profile_by_default.cs" />
+    <Compile Include="model\Delete_profile.cs" />
+    <Compile Include="model\List_Config.cs" />
+    <Compile Include="model\Response_open_profile.cs" />
+    <Compile Include="model\Sync_tag.cs" />
+    <Compile Include="model\UpdateProxy.cs" />
+    <Compile Include="model\Update_name.cs" />
+    <Compile Include="model\Update_note.cs" />
+    <Compile Include="model\Update_profile_proxy.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="action\ChangeStatus.resx">
+      <DependentUpon>ChangeStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="action\CheckingProfile.resx">
+      <DependentUpon>CheckingProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="action\CloseProfile.resx">
+      <DependentUpon>CloseProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="action\CreateProfileByDefault.resx">
+      <DependentUpon>CreateProfileByDefault.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="action\CreateProfileCustomize.resx">
+      <DependentUpon>CreateProfileCustomize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="action\DeleteProfile.resx">
+      <DependentUpon>DeleteProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="action\GetProfileByUid.resx">
+      <DependentUpon>GetProfileByUid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="action\ListConfig.resx">
+      <DependentUpon>ListConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="action\ListProfile.resx">
+      <DependentUpon>ListProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="action\ListStatus.resx">
+      <DependentUpon>ListStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="action\ListTag.resx">
+      <DependentUpon>ListTag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="action\OpenProfile.resx">
+      <DependentUpon>OpenProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="action\SyncTag.resx">
+      <DependentUpon>SyncTag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="action\Test_script.resx">
+      <DependentUpon>Test_script.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="action\UpdateName.resx">
+      <DependentUpon>UpdateName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="action\UpdateNote.resx">
+      <DependentUpon>UpdateNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="action\Update_Proxy.resx">
+      <DependentUpon>Update_Proxy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Selenium.WebDriver.4.9.1\build\Selenium.WebDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.4.9.1\build\Selenium.WebDriver.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Selenium.WebDriver.4.9.1\build\Selenium.WebDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.4.9.1\build\Selenium.WebDriver.targets'))" />
+    <Error Condition="!Exists('..\packages\Selenium.WebDriver.ChromeDriver.112.0.5615.4900\build\Selenium.WebDriver.ChromeDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.ChromeDriver.112.0.5615.4900\build\Selenium.WebDriver.ChromeDriver.targets'))" />
+  </Target>
+  <Import Project="..\packages\Selenium.WebDriver.ChromeDriver.112.0.5615.4900\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.ChromeDriver.112.0.5615.4900\build\Selenium.WebDriver.ChromeDriver.targets')" />
+</Project>
