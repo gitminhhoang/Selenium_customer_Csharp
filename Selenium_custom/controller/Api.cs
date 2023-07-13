@@ -428,7 +428,7 @@ namespace Selenium_custom.controller
                 http.SetRequestHeader("Accept", "*/*");
                 http.SetRequestHeader("Content-Type", "application/json");
 
-                string httpResponse = http.PutText("http://localhost:5555/change-status", JsonConvert.SerializeObject(_body), "utf-8", "application/json", false, false);
+                string httpResponse = http.PutText("http://localhost:5555/update-proxy", JsonConvert.SerializeObject(_body), "utf-8", "application/json", false, false);
                 if (httpResponse == null)
                 {
                     throw new Exception("Error Request: " + httpResponse);
@@ -454,7 +454,7 @@ namespace Selenium_custom.controller
                 http.SetRequestHeader("Accept", "*/*");
                 http.SetRequestHeader("Content-Type", "application/json");
 
-                string httpResponse = http.PutText("http://localhost:5555/change-status", JsonConvert.SerializeObject(_body), "utf-8", "application/json", false, false);
+                string httpResponse = http.PutText("http://localhost:5555/update-proxy-profile", JsonConvert.SerializeObject(_body), "utf-8", "application/json", false, false);
                 if (httpResponse == null)
                 {
                     throw new Exception("Error Request: " + httpResponse);
