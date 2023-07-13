@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Interactions;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -126,6 +127,39 @@ namespace Selenium_custom.controller
                 value = driver.FindElement(By.CssSelector(element)).Text;
             }
             return value;
+        }
+        public void ScrollTo_Y(ChromeDriver driver, int y)
+        {
+            driver.ExecuteScript("window.scrollTo(0, "+y+")");
+        }
+        public void ScrollTo_X(ChromeDriver driver, int x)
+        {
+            driver.ExecuteScript("window.scrollTo("+x+",0)");
+        }
+        public ChromeDriver NewTab(ChromeDriver driver, string url)
+        {
+            driver.ExecuteScript("window.open('"+url+"'");
+            return driver;
+        }
+        public void CloseTab(ChromeDriver driver, string url)
+        {
+            driver.Close();
+            string handle = driver.WindowHandles[0];
+            driver.SwitchTo().Window(handle);
+        }
+        public void ReloadTab(ChromeDriver driver)
+        {
+            driver.Navigate().Refresh();
+        }
+        public void MouseElement(ChromeDriver driver,IWebElement element)
+        {
+            Actions action = new Actions(driver);
+            action.MoveToElement(element).Perform();
+        }
+        public void MouseOffset(ChromeDriver driver, int x, int y)
+        {
+            Actions action = new Actions(driver);
+            action.MoveByOffset(x,y).Perform();
         }
     }
 }
